@@ -1,0 +1,116 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Form</title>
+    <link rel="stylesheet" href=" {% static 'accounts/includes/style.css' %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Actor&family=Kite+One&family=Ubuntu:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="{% static 'accounts/includes/objs.js' %}"></script>
+</head>
+<body>
+<header class="headerPage">
+    
+    <a href="{% url 'home' %}"><h1 class="main">SSC</h1></a>
+    <div id="hamburgar" onclick="openNav()"></div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#" class="userLogIn"><b>Hello {{request.user}}</b></a>
+        <a href="{% url 'manage_users'%}">Manage users</a>
+        <a href="{% url 'manage_reports'%}">Manage reports</a>
+        <a href="#">Settings</a>
+        <a href="{% url 'logout' %}">Log out</a>
+    </div>
+    <div class="logInPage">Hello {{request.user}}  |  <a href="{% url 'logout' %}">Log out</a></div>
+</header>
+<div id="wrapper">
+    <main>
+        <div class="d-flex flex-row">
+            <div class="p-1">
+                <div id=menu>
+                    <ul>                        
+                        <li><img src="{% static 'accounts/images/home.png'%}" alt=""><a href="{% url 'home' %}">Home</a></li>
+                        <li><img src="{% static 'accounts/images/open.png'%}" alt=""><a href="{% url 'form' %}">Open report</a></li>
+                        <li><img src="{% static 'accounts/images/on.png'%}" alt=""><a href="{% url 'private' %}">On treatment</a></li>
+                        <li><img src="{% static 'accounts/images/Update.png'%}" alt=""><a href="#">City updates</a></li>
+                        <li><img src="{% static 'accounts/images/settings.png'%}" alt=""><a href="{% url 'manage_users'%}">Manager</a></li>
+                        <li><img src="{% static 'accounts/images/logout.jpg'%}" alt=""><a href="{% url 'logout' %}">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="p-2">
+                <nav class="topnav">
+                    <ul>
+                        <li><a href="{% url 'manage_users' %}">Users</a></li>
+                        <li><a href="#"><b>Reports</b></a></li>
+                        <li><a href="#">settings</a></li>
+                    </ul>
+                </nav>
+                <section id="forms">
+                    <h1>Reports table</h1>
+                    <div class="formUsers">
+                    <h4>Filter by:</h4> <br>
+                        <form method="GET" class="form-inline">
+                            {{MyFilter.form|crispy}}
+                            {% csrf_token %}
+                            <input type="submit" name="submit" value="send" id="next"  class="btn btn-outline-secondary">
+                        </form>
+                    </div>
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                        <table class="table table-striped mb-0">
+                            <thead>
+                            <tr>
+                                <th class="viewBut"></th>
+                                <th scope="col" class="nameUsr">name</th>
+                                <th scope="col" class="Date">Date</th>
+                                <th scope="col">Catagory</th>
+                                <th scope="col">Locaton</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Update</th>
+                                <th scope="col">Remove</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for report in reports %}
+                            <tr>
+                                <td class="viewBut"><a href="{% url 'progress' report.id %}">                                
+                                    <button type="button" class="btn btn-outline-secondary">VIEW</button>
+                                </a></td>
+                                <td class="nameUsr">{{report.name}}</td>
+                                <td class="Date">{{report.publication_date}}</td>
+                                <td>{{report.category}}</td>
+                                <td>{{report.location}}</td>
+                                <td>{{report.status}}</td>
+                                <td><a href="{% url 'update' report.id %}">                                
+                                    <button type="button" class="btn btn-outline-secondary">UPDATE</button>
+                                </a></td>
+                                <td><form action="{% url 'delete' report.id %}" method="POST">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-outline-secondary">DELETE</button>
+                                </form></td>
+                            </tr>
+                            {% endfor %}
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="#">About Us | </a>
+        <a href="#">Contact Us | </a>
+        <a href="#">Subscribe </a>
+        <p>&copy; SSC<p>
+    </footer>
+</div>
+</body>
+</html>

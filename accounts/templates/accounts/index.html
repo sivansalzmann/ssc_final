@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href=" {% static 'accounts/includes/style.css' %}"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Actor&family=Kite+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Actor&family=Kite+One&family=Ubuntu:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="{% static 'accounts/includes/get_forms.js' %}"></script>
+        <title>Home Page</title>
+    </head>
+    <body>
+        <div id="warrper">
+            <header id="homeHeader">
+                
+                <p><a href="#">SSC</a></p>
+                <div class="logIn">Hello {{request.user}}  |  <a href="{% url 'logout' %}">Log out</a></div>
+                <section id="container">
+                    <p>
+                        <b>WELCOME TO NEW <br> YORK CITY INTERFACE</b>
+                    </p>
+                    <nav class="topnav">
+                        <ul>
+                            <li><a href="{% url 'private' %}">All reports</a></li>
+                            <li><a href="#">Your reports</a></li>
+                            <li><a href="#">City updates</a></li>
+                        </ul>
+                    </nav>
+                    <img id="coverPhoto" alt="" src="{% static 'accounts/images/COVER.jpg' %}">
+                </section>
+            </header>
+            <main id="homeMain">
+                <h1>INQUIRLES BY CATEGORY</h1>
+                <div id="boxes">
+                    <section id="Safety_Hazards">
+                        <a href="{% url 'form' %}"><img alt="" src="{% static 'accounts/images/saftey.png' %}" title=""></a>
+                        <p>Safety Hazards</p>
+                    </section>
+                    <section id="Car_Accident">
+                        <a href="{% url 'form' %}"><img alt="" src="{% static 'accounts/images/car.png' %}" title=""></a>
+                        <p>Car Accident</p>
+                    </section>
+                    <section id="Animals">
+                        <a href="{% url 'form' %}?id=3"><img alt="" src="{% static 'accounts/images/leg.png' %}" title=""></a>
+                        <p>Animals</p>
+                    </section>
+                    <section id="Signpost_Damage">
+                        <a href="{% url 'form' %}"><img alt="" src="{% static 'accounts/images/signpost.png' %}" title=""></a>
+                        <p>Signpost Damage</p>
+                    </section>
+                    <section id="Weather_Damage">
+                        <a href="{% url 'form' %}"><img alt="" src="{% static 'accounts/images/weather.png' %}" title=""></a>
+                        <p>Weather Damage</p>
+                    </section>
+                    <section id="other">
+                        <a href="{% url 'form' %}"><img alt="" src="{% static 'accounts/images/other.png' %}" title=""></a>
+                        <p>Other</p>
+                    </section>
+                </div>
+            </main>
+            <footer>
+                <a href="#">About Us | </a>
+                <a href="#">Contact Us | </a>
+                <a href="#">Subscribe </a>
+                <p>&copy; SSC<p>
+            </footer>
+        </div>
+    </body>
+</html>

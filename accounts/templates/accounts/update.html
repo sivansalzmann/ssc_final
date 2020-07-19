@@ -1,0 +1,80 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Form</title>
+        <link rel="stylesheet" href=" {% static 'accounts/includes/style.css' %}"/>
+        <link href="https://fonts.googleapis.com/css2?family=Actor&family=Kite+One&family=Ubuntu:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="{% static 'accounts/includes/objs.js' %}"></script>
+    </head>
+    <body>
+        <header class="headerPage">
+            <a href="{% url 'home' %}"><h1 class="main">SSC</h1></a>
+            <div id="hamburgar" onclick="openNav()">
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#" class="userLogIn"><b>Hello {{request.user}}</b></a>
+                <a href="{% url 'private' %}">All reports</a>
+                <a href="#">Your reports</a>
+                <a href="{% url 'manage_users'%}">Manager</a>
+                <a href="{% url 'logout' %}">Log out</a>
+            </div>
+            <div class="logInPage">Hello {{request.user}}  |  <a href="{% url 'logout' %}">Log out</a></div>
+        </header>
+        <div id="wrapper">
+            <main>
+                <div class="d-flex flex-row">
+                    <div class="p-1">
+                        <div id=menu>
+                            <ul>
+                                <li><img src="{% static 'accounts/images/home.png'%}" alt=""><a href="{% url 'home' %}">Home</a></li>
+                                <li><img src="{% static 'accounts/images/open.png'%}" alt=""><a href="#">Open report</a></li>
+                                <li><img src="{% static 'accounts/images/on.png'%}" alt=""><a href="#">On treatment</a></li>
+                                <li><img src="{% static 'accounts/images/Update.png'%}" alt=""><a href="#">City updates</a></li>
+                                <li><img src="{% static 'accounts/images/settings.png'%}" alt=""><a href="{% url 'manage_users'%}">Manager</a></li>
+                                <li><img src="{% static 'accounts/images/logout.jpg'%}" alt=""><a href="{% url 'logout' %}">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <nav class="topnav">
+                            <ul>
+                                <li><a href="#">Type of reporting</a></li>
+                                <li><b><a href="#">Deatils</a></b></li>
+                                <li><a href="#">Summery</a></li>
+                            </ul>
+                        </nav>
+                        <section id="mainPage">
+                            <form action="#" method="POST">
+                                {% csrf_token %}
+                                {{form |crispy}}
+                                <input type="submit" name="submit" class="next"  value="UPDATE" class="btn btn-outline-secondary">                    
+                            </form>
+                            <form action="{% url 'delete' report.id %}" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" name="submit"   value="DELETE" class="btn btn-outline-secondary">                    
+                            </form>
+                            <img id="imgForm" alt="" src="{% static 'accounts/images/FORM.jpg'%}">
+                        </section>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <a href="#">About Us | </a>
+                <a href="#">Contact Us | </a>
+                <a href="#">Subscribe </a>
+                <p>&copy; SSC<p>
+            </footer>
+        </div>
+    </body>
+</html>

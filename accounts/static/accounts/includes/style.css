@@ -1,0 +1,819 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+header, main, footer, nav, aside, section, div  {
+
+  display: block;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+td a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+a:hover{
+  text-decoration: none;
+}
+body{
+  width: 100%;
+  height: auto;
+  font-family: 'Actor', sans-serif;
+}
+main{
+  background-color: #EAF2F8;
+}
+
+footer {
+  background-color: #2471A3;
+  padding: 30px;
+  text-align: center;
+}
+footer a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+footer p{
+  float: right;
+  color: black;
+}
+footer a:hover{
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}
+
+  /************************************Form,OpenR,Progress****************************/
+
+.p-1 #menu  ul{
+  display: inherit;
+}
+.p-1 #menu  ul li{
+  padding: 14.92%;
+}
+.p-1 #menu  ul li img{
+  width: 30px;
+  height: 30px;
+}
+.p-1 #menu  ul li a{
+  font-size: 19px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.p-2 .topnav ul li a{
+  font-size: 20px;
+  margin-left: 60px;
+  margin-top: 10px;
+ }
+ .p-2 .topnav ul{
+   display: inline-flex;
+ }
+ .p-1{
+  width: 300px;
+  background-color: whitesmoke;
+}
+.p-2{
+  width: 1000px;
+  background-color: whitesmoke;
+}
+.p-1 a{
+  padding: 10%;
+}
+
+.p-2 .topnav{
+  background-color: #2471A3;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.3);
+}
+#menu{
+  background-color:white;
+  font-family: 'Actor', sans-serif;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.3);
+}
+#menu li {
+  list-style-type:none;
+}
+li a:hover {
+  background-color: whitesmoke;
+}
+#mainPage{
+  height: 610px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.3);
+}
+#forms{
+  height: 610px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.3);
+}
+#forms h1{
+  font-family: 'Actor', sans-serif;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+table{
+  font-family: 'Actor', sans-serif;
+}
+.headerPage a h1{
+  font-size: 60px;
+  padding: 5%;
+  font-family: 'Kite One', sans-serif;
+  color: black;
+}
+.headerPage a:hover{
+  text-decoration: none;
+}
+.headerPage{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  background-color: #2471A3;
+}
+.headerPage img{
+  width: 60px;
+  height: 60px;
+  margin-top: 15px;
+  margin-left: 670px;
+}
+.headerPage p{
+  margin-top: 30px;
+  margin-left: 5px;
+  font-family: 'Actor', sans-serif;
+}
+
+  /************************************Home****************************/
+
+#homeHeader{
+    background-color: #2471A3;
+}
+
+#homeHeader p{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 120px;
+    font-family: 'Kite One', sans-serif;
+    font-weight:bold;
+}
+#homeHeader .logIn{
+  float: right;
+  font-weight:bold;
+  font-size:20px;
+  margin-top: -150px;
+  margin-right: 30px;
+  font-family: 'Actor', sans-serif;
+}
+#coverPhoto{
+  width: 500px;
+  height: 300px;
+  border-radius: 5px;
+  position: absolute;
+  left: 750px;
+  top: 110px;
+}
+#container p{
+  margin-left: 50px;
+  font-size: 40px;
+}
+#container p span{
+  font-size: 20px;
+}
+#container p img{
+  width: 30px;
+  height: 30px;
+}
+#animations{
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.insideBox{
+  height: 750px;
+  width: 1000px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.send{
+  width: 390px;
+  height: 50px;
+  color: white;
+  background-color: grey;
+}
+.justify-content-center{
+  margin-top: 40px;
+  margin-left: -20px;
+}
+.social1{
+  width: 50px;
+  height: 50px;
+}
+.social2{
+  width: 50px;
+  height: 50px;
+  margin-left: 70px;
+}
+#sign{
+  padding-left: 200px;
+  padding-bottom: 100px;
+  font-size: 15px;
+  color: black;
+}
+.flex-shrink-1 #forget{
+  padding-left: 85px;
+  font-size: 15px;
+  color: black;
+}
+.flex-shrink-1 h1{
+  text-align: center;
+  padding-top: 10%;
+  font-weight: bold;
+  font-family: 'Kite One', sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+  color: black;
+}
+.flex-shrink-1 h3{
+  text-align: center;
+  padding-top: 5%;
+  font-weight: bold;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+.w-100{
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.flex-shrink-1{
+  background-color: whitesmoke;
+  height: 750px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+main#homeMain > h1 {
+  font-size: 40px;
+  padding-top: 4%;
+  margin-left: 50px;
+}
+main#homeMain > #boxes{
+  display: flex;
+  flex-wrap: wrap;
+}
+main#homeMain > #boxes > section {
+  width: 150px;
+  height: 150px;
+  margin-left: 50px;
+  margin-top: 90px;
+  margin-bottom: 100px;
+  background-color: #A9CCE3;
+  border-radius: 10px;
+}
+main#homeMain > #boxes > section > a > img {
+  height: 100px;
+  width: 100px;
+  margin-top: 25px;
+  margin-left: 25px;
+  display: flex;
+}
+main#homeMain > #boxes > section > p {
+  padding-top: 30%;
+  font-size: 22px;
+}
+.topnav {
+  overflow: hidden;
+  font-family: 'Actor', sans-serif;
+}
+.topnav ul {
+  display: inline-flex;
+  list-style-type: none;
+  margin-left: 30px;
+}
+#navPage ul li a{
+  font-size: 30px;
+}
+  
+/* Style the links inside the navigation bar */
+nav a {
+  float: left;
+  color: black;
+  padding: 14px 36px;
+  font-size: 20px;
+} 
+  /* Change the color of links on hover */
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+  text-decoration: none;
+}  
+/* Add a color to the active/current link */
+nav a.active {
+  color: white;
+}
+#container #close{
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.headerPage .logInPage{
+  font-weight:bold;
+  font-size:20px;
+  position:absolute;
+  right: 20px;
+  top: 35px;
+  font-family: 'Actor', sans-serif;
+  color:black;
+}
+
+  /************************************Form****************************/
+ 
+form{
+  font-size: 15px;
+  padding-left: 40px;
+}
+#imgForm{
+  width: 50%;
+  height: 610px;
+  margin-right: -28.5px;
+  margin-top: -28.5px;
+}
+.next{
+  width: 100px;
+  height: 40px;
+  float: inline-end;
+}
+button#butCheck{
+  font-size: 8px;
+}
+
+/************************************Progress******************************/
+.steps .step-content ul li{
+  list-style-type: disc;
+}
+.steps h3{
+  padding: 1%;
+  font-size: 50px;
+}
+.steps img{
+  display: none;
+}
+.steps {
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.3);
+  background-color: #FFF;
+  padding: 24px 0;
+  position: relative;
+  margin: auto;
+}
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 24px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  left: calc(50px / 2);
+  z-index: 1;
+}
+.steps::after {
+  content: '';
+  position: absolute;
+  height: 13px;
+  width: 13px;
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 5px 0px var(--primary-color);
+  border-radius: 15px;
+  left: calc(50px / 2);
+  bottom: 24px;
+  transform: translateX(-45%);
+  z-index: 2;
+}
+.step {
+  padding: 0 20px 24px 50px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  background-color: #FFF;
+}
+.step::before {
+  content: '';
+  position: absolute;
+  height: 13px;
+  width: 13px;
+  background-color: rgb(198, 198, 198);
+  border-radius: 15px;
+  left: calc(50px / 2);
+  transform: translateX(-45%);
+  z-index: 2;
+}
+.step::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: rgb(198, 198, 198);
+  left: calc(50px / 2);
+  top: 0;
+  z-index: 1;
+}
+.step.minimized {
+  background-color: #FFF;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+.header {
+  user-select: none;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.subheader {
+  user-select: none;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.step-content {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  font-size: 15px;
+  font-family: 'Actor', sans-serif;
+}
+.step.minimized > .step-content {
+  height: 0px;
+}
+.step-content.one {
+  height: 100px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.step-content.two {
+  height: 100px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.step-content.three {
+  height: 100px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.next-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: red;
+  box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.3);
+  color: #FFF;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+.close-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: rgb(255, 0, 255);
+  box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.3);
+  color: #FFF;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+/* Irrelevant styling things */
+.close-btn:hover {
+  background-color: rgba(255, 0, 255, 0.6);
+}
+.close-btn:focus {
+  outline: 0;
+}
+.next-btn:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+.next-btn:focus {
+  outline: 0;
+}
+.step.minimized:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+#forms form{
+  justify-content: space-around;
+  margin-left: -60px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+#forms form input{
+  margin-left: 5px;
+}
+#forms form select{
+  margin-left: 5px;
+}
+#forms form input[type=submit] {
+   width: 100px;
+}
+.my-custom-scrollbar {
+  position: relative;
+  height: 400px;
+  overflow: auto;
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+  /************************************openR****************************/
+
+#mainPage #openR #edit_delete{
+  margin-left: 40px;
+}
+#mainPage #openR #edit_delete .btn {
+  font-size: 12px;
+  font-family: 'Actor', sans-serif;
+}
+#openR{
+  display: flex;
+  flex-direction: column;
+}
+#openR a{
+  text-decoration: none;
+  color: black;
+}
+#openR section{
+  background-color: whitesmoke;
+  width:500px;
+  height: 100px;
+  margin-left: 40px;
+  box-shadow: 5px 5px #888888;
+  margin-top: 20px;   
+}
+#openR section h2{
+  padding-left:6%;
+  padding-top: 2%;
+  font-size: 22px;
+}
+#openR section span{
+  font-size: 12px;
+  margin-left: 290px;
+}
+#openR section p{
+  margin-left: 30px;
+}
+#openR h1{
+  padding-left: 6%;
+  padding-top: 3%;
+}
+#openR section img{
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 700px;
+}
+.custom-select{
+  width: 30px;
+}
+#side{
+  margin-top: 50px;   
+  height: 340px;
+  width: 300px;
+  background-color: whitesmoke;
+  box-shadow: 5px 5px #888888;
+  display: flex;
+  flex-direction: column;
+}
+.btn-secondary{
+  width: 440px;
+  font-weight: bold;
+  font-family: 'Kite One', sans-serif;
+  margin-left:auto;
+}
+.formUser{
+  font-family: 'Kite One', sans-serif;
+  margin-top:40px;
+}
+.reportForm{
+  font-size:15px;
+  font-family: 'Actor', sans-serif;
+}
+#id_details{
+  width:310px;
+  height:50px;
+}
+#div_id_picture > label{
+  display:none;
+}
+.messages{
+  font-weight:bold;
+  font-size: 25px;
+}
+.haveAccount , .messages{
+  text-align:center;
+  font-family: 'Kite One', sans-serif;
+}
+.logInPage a, .haveAccount a{
+  color:black;
+}
+.logInPage a:hover , .haveAccount a:hover{
+  text-decoration:none;
+  font-weight:bold;
+  color:black;
+}
+.headerPage a .main{
+  font-size:80px;
+}
+#summeryPage{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Actor', sans-serif;
+  font-size: 20px;
+  justify-content: space-around;
+}
+   
+  /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: whitesmoke; /* Black*/
+  font-family: 'Actor', sans-serif;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  box-shadow: 5px 10px;
+}
+.sidenav .userLogIn{
+  font-size: 30px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #565D62;
+  font-weight: bold;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+  /************************************Devices****************************/
+
+@media screen and (max-width: 600px) {    
+    #wrapper , body{
+      width: 100%;
+      margin: 0 auto;
+  }
+  .nameUsr,.viewBut,.Date,.formUsers,.email,.logInPage,#side,#coverPhoto,.p-2 > nav,#imgForm,.p-1,form.example input[type=text],form.example button,form.example button,#headerForm p,#headerForm img{
+    display: none;
+  }
+  .insideBox,.bd-highlight{
+    width: 400px;
+  }
+  .btn-secondary, #exampleFormControlInput1, #exampleInputPassword1,#div_id_username,#div_id_email,#div_id_password1,#div_id_password2{
+    width: 300px;
+  }
+  .bd-highlight h1{
+    font-size: 40px;
+  }
+  .formUser{
+    font-size: 16px;
+  }
+  #hamburgar{
+    background-image: url(../images/hamburger.png);
+    width: 40px;
+    height: 40px;
+    left: 400px;
+    top: 27px;
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+  }
+  .steps img{
+    width: 40px;
+    height: 30px;
+    padding-left: 1%;
+  }
+  #openR section{
+    background-color: white;
+    width:400px;
+    height: 100px;
+    margin-left: 22px;
+    box-shadow: 5px 5px #888888;
+    margin-top: 35px;   
+  }
+  #openR section h2{
+    padding-left:6%;
+    padding-top: 2%;
+    font-size: 22px;
+  }
+  #openR section span{
+    font-size: 12px;
+    margin-left: 200px;
+  }
+  #openR section p{
+    margin-left: 30px;
+  }
+  #openR h1{
+    padding-left: 6%;
+    padding-top: 3%;
+  }
+  #openR section img{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 280px;
+  }
+  #openR section img#sign{
+    height: 30px;
+    width: 50px;
+    position: absolute;
+    left: 370px;
+  }
+  #openR section img#sign2{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 370px;
+  }
+  #openR section img#sign3{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 370px;
+  }
+  #progressBar h1{
+    padding-left: 6%;
+  }
+  #progressBar img{
+    width: 50px;
+    height: 50px;
+    margin-left: 23px;
+  }
+  .signUp{
+    padding-right: 3px;
+  }
+  .custom-select{
+    width: 30px;
+  }
+  #animations, .w-100, flex-shrink-1{
+    display: none;
+  }
+  flex-shrink-1 form{
+    width: 600px;
+  }
+  input{
+    width:20%;
+  }
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
