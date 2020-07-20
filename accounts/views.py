@@ -73,7 +73,8 @@ def reprtPage(request):
     return render(request, 'accounts/requestForm.html' , context)
 
 @login_required(login_url='login')
-@allowed_users(allowed_roles=['admin'])
+#@allowed_users(allowed_roles=['admin'])
+@admin_only
 def manage_users(request):
     
     users = User.objects.all()
@@ -85,7 +86,8 @@ def manage_users(request):
     return render(request, 'accounts/manager_users.html', context)
 
 @login_required(login_url='login')
-@allowed_users(allowed_roles=['admin'])
+#@allowed_users(allowed_roles=['admin'])
+@admin_only
 def manage_reports(request):
     reports = Report.objects.all()
     
